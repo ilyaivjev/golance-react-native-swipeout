@@ -1,6 +1,7 @@
-import tweenState from 'react-tween-state';
-import NativeButton from './NativeButton';
-import styles from './styles';
+var React = require('react')
+var tweenState = require('react-tween-state')
+var {PanResponder, TouchableHighlight, StyleSheet, Text, View} = require('react-native')
+var styles = require('./styles.js')
 
 import React, {
   Component,
