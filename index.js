@@ -81,6 +81,7 @@ const SwipeoutBtn = React.createClass({
         underlayColor={this.props.underlayColor}
         disabled={this.props.disabled}
         style={styleSwipeoutBtn}
+        type={btn.type}
         textStyle={styleSwipeoutBtnText}>
         {
           (btn.component ?
@@ -157,9 +158,9 @@ const Swipeout = React.createClass({
     }
     this.refs.swipeoutContent.measure((ox, oy, width, height) => {
       this.setState({
-        btnWidth: (width/5),
-        btnsLeftWidth: this.props.left ? (width/5)*this.props.left.length : 0,
-        btnsRightWidth: this.props.right ? (width/5)*this.props.right.length : 0,
+        btnWidth: (width/5.5),
+        btnsLeftWidth: this.props.left ? (width/5.5)*this.props.left.length : 0,
+        btnsRightWidth: this.props.right ? (width/5.5)*this.props.right.length : 0,
         swiping: true,
         timeStart: (new Date()).getTime(),
       });
@@ -343,17 +344,17 @@ const Swipeout = React.createClass({
   _renderButton: function(btn, i) {
     return (
       <SwipeoutBtn
-          backgroundColor={btn.backgroundColor}
-          color={btn.color}
-          component={btn.component}
-          disabled={btn.disabled}
-          height={this.state.contentHeight}
-          key={i}
-          onPress={() => this._autoClose(btn)}
-          text={btn.text}
-          type={btn.type}
-          underlayColor={btn.underlayColor}
-          width={this.state.btnWidth}/>
+        backgroundColor={btn.backgroundColor}
+        color={btn.color}
+        component={btn.component}
+        disabled={btn.disabled}
+        height={this.state.contentHeight}
+        key={i}
+        onPress={() => this._autoClose(btn)}
+        text={btn.text}
+        type={btn.type}
+        underlayColor={btn.underlayColor}
+        width={this.state.btnWidth}/>
       );
   }
 })
@@ -362,4 +363,3 @@ Swipeout.NativeButton = NativeButton;
 Swipeout.SwipeoutButton = SwipeoutBtn;
 
 export default Swipeout;
-
