@@ -1,6 +1,6 @@
 {
-  "name": "react-native-swipeout",
-  "version": "2.0.12",
+  "name": "golance-react-native-swipeout",
+  "version": "0.0.1",
   "description": "iOS-style swipeout buttons behind component",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:dancormier/react-native-swipeout.git"
+    "url": "git@github.com:ilyaivjev/golance-react-native-swipeout.git"
   },
   "keywords": [
     "react-native",
@@ -19,12 +19,8 @@
     "swipe",
     "ui"
   ],
-  "author": "Dan Cormier",
+  "author": "Ilya Ivyev",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/dancormier/react-native-swipeout/issues"
-  },
-  "homepage": "https://github.com/dancormier/react-native-swipeout",
   "dependencies": {
     "react-tween-state": "^0.1.5",
     "react-native-vector-icons": "^2.1.0"
